@@ -1,0 +1,11 @@
+Bootstrap: library
+From: centos:7.7
+
+%post
+    yum install -y which
+    yum install -y yum-utils
+    yum-builddep -y python3
+    yum install -y git
+    yum install -y make
+    yum install -y centos-release-scl
+    yum install -y devtoolset-9
